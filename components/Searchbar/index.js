@@ -1,6 +1,4 @@
 import React from "react";
-import "./style.css";
-import Search from '../Search';
 import Table from "../Table";
 
 class Searchbar extends React.Component {
@@ -23,7 +21,7 @@ class Searchbar extends React.Component {
         });
         let input = event.target.value;
         const list = this.props.employees.filter((item) => {
-            let properties = item.name.first + item.name.last + item.cell + item.email;
+            let values = item.name.first + item.name.last + item.cell + item.email;
             return values.indexOf(input) !== -1;
         });
 
@@ -33,7 +31,7 @@ class Searchbar extends React.Component {
     }
 
     render() {
-        return (
+        return <div>
             <div>
                 <form className="form">
                     <input
@@ -42,13 +40,12 @@ class Searchbar extends React.Component {
                         onChange={event => this.handleInputChange(event)}
                         type="text"
                         placeholder="Search for an employee by name"
-                        />
-                </form>
-                <Table
-                    employeeList={this.state.filter}
                     />
+                </form>
+
             </div>
-        )
+        </div>
+
     }
 }
 

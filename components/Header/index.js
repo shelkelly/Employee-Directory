@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 
 function Header() {
     return (
@@ -7,7 +6,6 @@ function Header() {
             <div className="header">
                 Employee Directory
             </div>
-            <p></p>
         </div>
     )
 }

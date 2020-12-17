@@ -1,7 +1,7 @@
 import React from "react";
 
 function Table(props) {
-    return <table class="table">
+    return <table className="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
