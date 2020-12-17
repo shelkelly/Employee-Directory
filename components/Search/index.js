@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import "./style.css";
-import Table from '../Table';
 
 class Search extends Component {
     state = {
         alphabetical: true,
-        ascending: true,
         sortedEmployees: [],
         employees: []
     }
@@ -56,20 +54,7 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <div classname="sort"><p onClick={this.sortName} className="sortName">Click here to sort employees alphabetically.</p></div>
-
-                {
-                    this.state.sortedEmployees.length > 0 &&
-                    this.state.sortedEmployees.map((item, index) => (
-                        <Table
-                            image={item.picture.thumbnail}
-                            first={item.name.first}
-                            last={item.name.last}
-                            phone={item.cell}
-                            email={item.email}
-                        />
-                    ))
-                }
+                <div className="sort"><p onClick={this.sortName} className="sortName">Click here to sort employees alphabetically.</p></div>
                 
             </div>
         )

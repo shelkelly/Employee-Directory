@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
     return (
         <div className="wrapper">
-            <div className="header">
+            <div class="header">
                 Employee Directory
             </div>
         </div>
